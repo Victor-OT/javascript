@@ -29,3 +29,11 @@ function sumWithSideEffect(a)
     total += a
     return total
 }
+
+//Funcion Pura
+
+function square(x)
+{
+    return x * x
+}
+
