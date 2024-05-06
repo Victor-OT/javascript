@@ -83,11 +83,11 @@ console.log(Kioshi.tipo)
  objeto.metodo()
 
  //Funciones Asíncronas
- async function fetchData()
+ /* async function fetchData()
  {
     const = await
     fetch('<https://api.example.com/data>')
     const data = await
     Response.json()
     console.log(data)
- }
+ } */
