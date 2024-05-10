@@ -26,3 +26,24 @@ console.log(arrayMixto[0])
 console.log(arrayMixto[3])
 
 console.log(arrayMixto.length)
+
+//Mutabilidad
+let fruits = ['Manzana', 'Pera', 'Durazno', 'Melón']
+ console.log(fruits)
+
+ fruits.push('Sandía')
+ console.log(fruits)
+
+ let newFruits = fruits.concat('Fresa', 'Uvas', 'Plátano')
+ console.log(newFruits)
+
+ console.log(Array.isArray(newFruits))
+
+ //Practical excercise: Summ all elements of an array.
+
+ const numbersArray = [1,2,3,4,5]
+ sum = 0
+ array.forEach(number => {
+    sum += number
+ });
+ console.log(sum)
