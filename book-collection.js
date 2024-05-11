@@ -16,7 +16,7 @@ console.log("Hola Mundo")
 while(exit == false)
     {
         let userAction = prompt(`Book List: ${books}
-        Actions: 1) Add book 2)  Remove top book  3) Exit
+        Actions: 1)Add book  2)Remove top book  3)Exit
         Choose an Action Number: `).toLowerCase()
 
         switch(userAction)
@@ -27,13 +27,25 @@ while(exit == false)
                 break
 
             case '2':
-                removeBook()
-                break
+                if(books.length === 0)
+                    {
+                        alert('Nothing to remove: Book List is empty')
+                        break
+                    }
+                else
+                {
+                    removeBook()
+                    break
+                }
 
             case '3':
                 exit = true
                 break
+
+            default:
+                alert('Action not found, try again.')
+                break
         }
     }
 
-alert('See you Madakada')
+alert('See you Motherfucker')
