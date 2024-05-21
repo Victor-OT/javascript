@@ -1,4 +1,5 @@
-const competitions = [
+//solución 1
+/* const competitions = [
     ['Javascript', 'C#'],
     ['C#', 'Python'],
     ['Python', 'Javascript']
@@ -46,4 +47,33 @@ function findWinner(competiciones, resultados, teamPoints){
     console.log('El ganador es: ' + getWinner(teamPoints))
 }
 
-findWinner(competitions, results, teamPoints)
+findWinner(competitions, results, teamPoints) */
+
+//Solución 2
+const competitions = [
+    ['Javascript', 'C#'],
+    ['C#', 'Python'],
+    ['Python', 'Javascript']
+  ];
+
+const results = [0, 0, 1]
+
+function winnerTournament(competitions, results) {
+    const teamPoints = {}
+    let winner = ''
+
+    for(let i = 0; i < competitions.length; i++){
+        const [home, away] = competitions[i]
+        const winnerTeam = results[i] === 1 ? home : away
+
+        teamPoints[winnerTeam] = (teamPoints[winnerTeam] || 0) + 3
+
+        if(!winner || teamPoints[winnerTeam] > teamPoints[winner]){
+            winner = winnerTeam
+        }
+    }
+    console.log(teamPoints)
+    return winner
+}
+
+console.log(winnerTournament(competitions, results))
